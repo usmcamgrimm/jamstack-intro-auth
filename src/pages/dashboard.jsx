@@ -10,10 +10,10 @@ import { navigate } from 'gatsby'
 import 'react-netlify-identity-widget/styles.css'
 
 const Dashboard = ({location}) => {
-    const [isVisible, setVisibility] = useState(true);
+    const [isVisible, setVisibility] = useState(false);
     useEffect(() => {
         if (location.pathname.match(/^\/dashboard\/?$/)) {
-            navigate('dashboard/login', {replace: true})
+            navigate('/dashboard/login', {replace: true});
         }
     }, []);
 
